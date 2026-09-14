@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hospital Management System</title>
+
+```
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<div class="dashboard">
+
+    <header>
+        <h1>Hospital Management System</h1>
+
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+
+        <h2>Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Patients</h3>
+                <h2 id="patientCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Doctors</h3>
+                <h2 id="doctorCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Appointments</h3>
+                <h2 id="appointmentCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Medical Records</h3>
+                <h2 id="recordCount">0</h2>
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <a href="patients.html">Patients</a>
+
+            <a href="doctors.html">Doctors</a>
+
+            <a href="appointments.html">Appointments</a>
+
+            <a href="records.html">Medical Records</a>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+<script>
+    function logout() {
+        window.location.href = "index.html";
+    }
+</script>
+```
+
+</body>
+
+</html>

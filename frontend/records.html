@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records - Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+
+            <h1>Hospital Management System</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+
+        </header>
+
+        <main>
+
+            <div class="page-header">
+
+                <h2>Medical Records</h2>
+
+                <button
+                    class="add-button"
+                    onclick="showRecordForm()"
+                >
+                    + Add Record
+                </button>
+
+            </div>
+
+
+            <!-- Medical Record Form -->
+
+            <div id="recordForm" class="form-container">
+
+                <h3>Add Medical Record</h3>
+
+                <form id="addRecordForm">
+
+                    <label>Patient Name</label>
+
+                    <input
+                        type="text"
+                        id="recordPatient"
+                        required
+                    >
+
+                    <label>Doctor Name</label>
+
+                    <input
+                        type="text"
+                        id="recordDoctor"
+                        required
+                    >
+
+                    <label>Diagnosis</label>
+
+                    <input
+                        type="text"
+                        id="recordDiagnosis"
+                        required
+                    >
+
+                    <label>Prescription</label>
+
+                    <textarea
+                        id="recordPrescription"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Add Record
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="hideRecordForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Records Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Diagnosis</th>
+                            <th>Prescription</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="recordTable">
+
+                        <tr>
+                            <td>R001</td>
+                            <td>Rahul Sharma</td>
+                            <td>Dr. Sharma</td>
+                            <td>Fever</td>
+                            <td>Paracetamol</td>
+                        </tr>
+
+                        <tr>
+                            <td>R002</td>
+                            <td>Priya Singh</td>
+                            <td>Dr. Singh</td>
+                            <td>Diabetes</td>
+                            <td>Metformin</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

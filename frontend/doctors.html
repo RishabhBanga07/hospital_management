@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <h1>Hospital Management System</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+        </header>
+
+        <main>
+
+            <div class="page-header">
+                <h2>Doctor Management</h2>
+
+                <button class="add-button" onclick="showDoctorForm()">
+                    + Add Doctor
+                </button>
+            </div>
+
+            <!-- Add Doctor Form -->
+
+            <div id="doctorForm" class="form-container">
+
+                <h3>Add New Doctor</h3>
+
+                <form id="addDoctorForm">
+
+                    <label>Doctor Name</label>
+                    <input type="text" id="doctorName" required>
+
+                    <label>Specialization</label>
+                    <input type="text" id="doctorSpecialization" required>
+
+                    <label>Phone</label>
+                    <input type="text" id="doctorPhone" required>
+
+                    <label>Availability</label>
+                    <input type="text" id="doctorAvailability"
+                        placeholder="Example: 9 AM - 1 PM" required>
+
+                    <button type="submit">Add Doctor</button>
+
+                    <button type="button" onclick="hideDoctorForm()">
+                        Cancel
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Doctor Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Phone</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="doctorTable">
+
+                        <tr>
+                            <td>D001</td>
+                            <td>Dr. Sharma</td>
+                            <td>Cardiologist</td>
+                            <td>9876543212</td>
+                            <td>9 AM - 1 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>D002</td>
+                            <td>Dr. Singh</td>
+                            <td>General Physician</td>
+                            <td>9876543213</td>
+                            <td>10 AM - 4 PM</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

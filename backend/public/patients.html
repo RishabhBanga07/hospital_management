@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients - Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <h1>Hospital Management System</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+        </header>
+
+        <main>
+
+            <div class="page-header">
+                <h2>Patient Management</h2>
+
+                <button class="add-button" onclick="showPatientForm()">
+                    + Add Patient
+                </button>
+            </div>
+
+            <!-- Add Patient Form -->
+
+            <div id="patientForm" class="form-container">
+
+                <h3>Add New Patient</h3>
+
+                <form id="addPatientForm">
+
+                    <label>Patient Name</label>
+                    <input type="text" id="patientName" required>
+
+                    <label>Age</label>
+                    <input type="number" id="patientAge" required>
+
+                    <label>Gender</label>
+                    <select id="patientGender" required>
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+
+                    <label>Phone</label>
+                    <input type="text" id="patientPhone" required>
+
+                    <label>Medical Condition</label>
+                    <input type="text" id="patientCondition" required>
+
+                    <button type="submit">Add Patient</button>
+
+                    <button type="button" onclick="hidePatientForm()">
+                        Cancel
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Patient Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="patientTable">
+
+                        <tr>
+                            <td>P001</td>
+                            <td>Rahul Sharma</td>
+                            <td>25</td>
+                            <td>Male</td>
+                            <td>9876543210</td>
+                            <td>Fever</td>
+                        </tr>
+
+                        <tr>
+                            <td>P002</td>
+                            <td>Priya Singh</td>
+                            <td>30</td>
+                            <td>Female</td>
+                            <td>9876501234</td>
+                            <td>Diabetes</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

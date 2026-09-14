@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <h1>Hospital Management System</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+        </header>
+
+        <main>
+
+            <div class="page-header">
+                <h2>Appointment Management</h2>
+
+                <button class="add-button" onclick="showAppointmentForm()">
+                    + Book Appointment
+                </button>
+            </div>
+
+            <!-- Appointment Form -->
+
+            <div id="appointmentForm" class="form-container">
+
+                <h3>Book New Appointment</h3>
+
+                <form id="addAppointmentForm">
+
+                    <label>Patient Name</label>
+
+                    <input
+                        type="text"
+                        id="appointmentPatient"
+                        required
+                    >
+
+                    <label>Doctor Name</label>
+
+                    <input
+                        type="text"
+                        id="appointmentDoctor"
+                        required
+                    >
+
+                    <label>Date</label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        required
+                    >
+
+                    <label>Time</label>
+
+                    <input
+                        type="time"
+                        id="appointmentTime"
+                        required
+                    >
+
+                    <label>Reason</label>
+
+                    <input
+                        type="text"
+                        id="appointmentReason"
+                        placeholder="Example: Fever"
+                        required
+                    >
+
+                    <button type="submit">
+                        Book Appointment
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="hideAppointmentForm()"
+                    >
+                        Cancel
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Appointment Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Reason</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="appointmentTable">
+
+                        <tr>
+                            <td>A001</td>
+                            <td>Rahul Sharma</td>
+                            <td>Dr. Sharma</td>
+                            <td>12/09/2026</td>
+                            <td>10:00 AM</td>
+                            <td>Fever</td>
+                        </tr>
+
+                        <tr>
+                            <td>A002</td>
+                            <td>Priya Singh</td>
+                            <td>Dr. Singh</td>
+                            <td>13/09/2026</td>
+                            <td>11:30 AM</td>
+                            <td>Regular Checkup</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
